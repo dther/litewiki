@@ -10,5 +10,7 @@ if exists("b:did_litewiki")
 endif
 let b:did_litewiki = 1
 
-nnoremap <Tab> :call litewiki#links#Next()<CR>
-nnoremap <CR> :call litewiki#links#Follow()<CR>
+nnoremap <Tab> :call litewiki#Next()<CR>
+nnoremap <CR> :call litewiki#Follow()<CR>
+
+nnoremap <leader>lw :call litewiki#Index()<CR>
