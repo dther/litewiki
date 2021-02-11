@@ -4,6 +4,7 @@
 " Version: 0.1
 " Last Change: 2021 Feb 07
 
-syntax match LitewikiLink /\[\w*\.wiki\.\w*\]/
+syntax match LitewikiFile /\w*\.wiki\.\w*/
+" syntax region LitewikiLink matchgroup=LitewikiLinkDelimiter start="\[" end="\]" contains=LitewikiFile keepend contained
 
-highlight default link LitewikiLink htmlLink
+highlight default link LitewikiFile htmlLink
