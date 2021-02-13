@@ -9,6 +9,7 @@ but found that I could replace it almost entirely using three commands.
 This is a slightly more feature full version of those three commands.
 All you need to know is:
 
+ * Set your desired wiki location to $LITEWIKI.
  * A valid filename is anything which matches the regex `/*.wiki.*/`
    Valid filenames can be entered or created using \<Enter>.
  * Links to other .wiki.\* pages can be standard markdown links,
@@ -28,3 +29,21 @@ All you need to know is:
  * Export-to-html script leveraging command line utilities,
    with automatic `.md -> .html` link conversion
  * Live HTML view via hacky browser interfacing
+
+## NOT Planned Features
+
+ * Journal functionality. I currently just have the following in my .vimrc:
+```
+nnoremap <leader>d<leader>d :Goyo<CR>:e ~/docs/diary/`date +\%Y-\%m-\%d`.wiki.md<CR>
+```
+ * Todo list functionality. I use `todotxt-cli`.
+ * Tables. Plaintext tables suck. org-mode tables are the worst way to deal with plaintext tables,
+   except for all the other ways to deal with plaintext tables. Just use csv and view it using something else.
+ * Calendar integrations. `calcurse` is a nice, visual way to deal with personal planning.
+
+## Licensing
+
+(c) Rudy Dellomas III <dther@dther.xyz>
+
+Made available under GPLv3, a copy of which should be provided in this repository
+under "LICENSE".
