@@ -2,7 +2,6 @@
 " Language: litewiki *.wiki.* files
 " Author: Rudy Dellomas III <dther@dther.xyz>
 " Version: 0.1
-" Last Change: 2021 Feb 08
 "
 
 function! litewiki#Index()

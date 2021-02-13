@@ -2,7 +2,6 @@
 " Language: litewiki *.wiki.* files
 " Author: Rudy Dellomas III <dther@dther.xyz>
 " Version: 0.1
-" Last Change: 2021 Feb 08
 "
 " Only do this when not done yet for this buffer
 if exists("b:did_litewiki")
