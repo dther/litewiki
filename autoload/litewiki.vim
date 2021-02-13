@@ -1,8 +1,26 @@
 " litewiki.vim plugin
 " Language: litewiki *.wiki.* files
 " Author: Rudy Dellomas III <dther@dther.xyz>
-" Version: 0.1
 "
+
+" to allow using shell scripts
+let s:script_folder_path = expand("<sfile>:p:h:h/bin/")
+
+function! litewiki#ExpandLinks()
+    normal! :%s/\[\(.*\)\(\.wiki\..*\)\]/[\1](\1\2)/g
+endfunction
+
+" Export to HTML
+" Might be better to do this with an external script. I'll work it out.
+function! litewiki#ExportHtml()
+    if expand("%:e:e") !=? "wiki.md"
+        echo "Not a wiki.md file."
+    else
+        "$LITEWIKI has to be expanded for this to work.
+        "i.e. can't use ~ as home
+        normal! :!markdown % > $LITEWIKI/html/%:r.html
+    endif
+endfunction
 
 function! litewiki#Index()
     " Go to the wiki directory and enter the file [index.md.wiki].

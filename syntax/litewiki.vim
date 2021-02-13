@@ -1,7 +1,7 @@
 " litewiki.vim plugin, syntax highlighting
 " Language: litewiki *.wiki.* files
 " Author: Rudy Dellomas III <dther@dther.xyz>
-" Version: 0.1
+
 
 
 syntax match LitewikiFile /\w*\.wiki\.\w*/

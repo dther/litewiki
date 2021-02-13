@@ -1,7 +1,7 @@
 " litewiki.vim plugin
 " Language: litewiki *.wiki.* files
 " Author: Rudy Dellomas III <dther@dther.xyz>
-" Version: 0.1
+
 "
 
 " set this to 1 to make your own binds

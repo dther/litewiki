@@ -1,4 +1,5 @@
 # litewiki.vim
+*Version 1.0*
 
 An austere, minimalist vimwiki-style note-taking plugin.
 
@@ -22,12 +23,11 @@ All you need to know is:
  * There's no requirement that files be markdown.
    If you want to add links in non-markdown files, put a markdown or
    shorthand link inside a comment.
+ * Run `litewiki2html.sh` in a POSIX-compliant system to convert
+   $LITEWIKI into a hypertext wiki that can be viewed in the browser!
 
 ## Planned Features
 
- * Shorthand link (`[Example.wiki.md]`) expansion to standard Markdown links
- * Export-to-html script leveraging command line utilities,
-   with automatic `.md -> .html` link conversion
  * Live HTML view via hacky browser interfacing
 
 ## NOT Planned Features
