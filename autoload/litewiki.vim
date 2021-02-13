@@ -6,7 +6,7 @@
 
 function! litewiki#Index()
     " Go to the wiki directory and enter the file [index.md.wiki].
-    if isdirectory($LITEWIKI)
+    if isdirectory(expand($LITEWIKI))
         normal! :e $LITEWIKI/index.wiki.md
 "        lcd $LITEWIKI
     else
