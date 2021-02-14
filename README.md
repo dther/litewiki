@@ -29,6 +29,7 @@ All you need to know is:
 ## Planned Features
 
  * Live HTML view via hacky browser interfacing
+ * support for converting .wiki.csv files into html tables
 
 ## NOT Planned Features
 
