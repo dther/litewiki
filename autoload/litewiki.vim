@@ -46,13 +46,13 @@ endfunction
 
 function! litewiki#Follow()
     " Follow link under cursor
-    if !(matchstr(expand("<cfile>"), "\w*\.wiki\.\w*")==".wiki.")
+    if !(matchstr(expand("<cfile>"), "\w*\\.wiki\\.\w*")==".wiki.")
         echo "Not valid file!"
     elseif !empty(glob("<cfile>"))
         lcd %:p:h
-        normal! gf
+        silent normal! gf
     else
         lcd %:p:h
-        normal! :execute "edit" expand("<cfile>")
+        silent normal! :execute "edit" expand("<cfile>")
     endif
 endfunction
