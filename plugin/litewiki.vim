@@ -1,3 +1,3 @@
 " litewiki.vim global binds
 
-nnoremap <leader>lw :call litewiki#Index()<CR>
+nnoremap <silent> <leader>lw :call litewiki#Index()<CR>

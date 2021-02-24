@@ -25,8 +25,8 @@ endfunction
 function! litewiki#Index()
     " Go to the wiki directory and enter the file [index.md.wiki].
     if isdirectory(expand($LITEWIKI))
-        normal! :e $LITEWIKI/index.wiki.md
-"        lcd $LITEWIKI
+        silent normal! :e $LITEWIKI/index.wiki.md
+        silent lcd $LITEWIKI
     else
         echo "No wiki, please set $LITEWIKI"
     endif
