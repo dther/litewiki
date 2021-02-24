@@ -27,6 +27,7 @@ expandlinks() {
 convertdir() {
     # Make tmp buffers
     # so that i avoid using sed -i and therefore am POSIX compliant
+    # Well. Mostly. mktemp is present on almost every *nix system made in the last decade.
     sedbuffer=$(mktemp)
 
     # Ensure that output directory exists
@@ -48,7 +49,7 @@ convertdir() {
             # Prevent symlink loops...
             $2) ;;
             # just make a symbolic link and hope it works
-            *) ln -fs "$currentfile" "$2/${currentfile#$1}" ;;
+            *) ln -fs "$currentfile" "$2" ;;
         esac
     done
 
