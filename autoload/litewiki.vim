@@ -46,13 +46,21 @@ endfunction
 
 function! litewiki#Follow()
     " Follow link under cursor
-    if !(matchstr(expand("<cfile>"), "\w*\\.wiki\\.\w*")==".wiki.")
-        echo "Not valid file!"
-    elseif !empty(glob("<cfile>"))
+    if !(empty(glob("<cfile>")) && empty(glob("<cfile>" . ".wiki.md")))
         lcd %:p:h
         silent normal! gf
+    elseif !(matchstr(expand("<cfile>"), "\w*\\.wiki\\.\w*")==".wiki.")
+        echo "Not valid file!"
     else
         lcd %:p:h
         silent normal! :execute "edit" expand("<cfile>")
     endif
+endfunction
+
+function! litewiki#TagSearch()
+    " Search for keyword across all files in $LITEWIKI
+    " Um... Not too sure how I want to script this.
+    " Something like,
+    " :grep <cword> $LITEWIKI/*.wiki.* -sl
+    " But I don't know how to expand that.
 endfunction

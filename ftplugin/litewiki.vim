@@ -10,6 +10,8 @@ if exists("b:did_litewiki_default")
 endif
 let b:did_litewiki_default = 1
 
+setlocal suffixesadd=.wiki.md
+
 nnoremap <silent> <buffer> <script> <Tab> :call litewiki#Next()<CR>
 nnoremap <silent> <buffer> <script> <Backspace> :call litewiki#Prev()<CR>
 nnoremap <silent> <buffer> <script> <CR> :call litewiki#Follow()<CR>

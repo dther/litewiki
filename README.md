@@ -1,5 +1,9 @@
 # litewiki.vim
-*Version 1.0*
+
+***IMPORTANT: This git repository has been abandoned.***
+
+I'm figuring out a new way to take notes based entirely on ctags.
+This git repository is currently unmaintained.
 
 An austere, minimalist vimwiki-style note-taking plugin.
 
